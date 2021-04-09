@@ -1,1 +1,71 @@
-<p>lemon-software-design works!</p>
+<div class="container mt-5">
+  <h5 class="text-danger">Problem</h5>
+
+  <p class="text-danger">
+    One of our customers is starting a new company. He has a big warehouse full of products he wants to sell
+    through the Internet. Since it is a new company, there is no existing software or infrastructure.
+    The solution should should consist of three parts:
+  </p>
+  <ul class="text-danger">
+    <li> A webshop where customers can place orders. Only registered users can place new orders. </li>
+    <li>A back-office where all products and their stock are managed. The back-office is also used to
+      receive and handle product orders. It should also be possible to track where each product goes
+      to </li>
+    <li>
+      A connection to third party accounting software (Winbooks on Web). All orders should be pushed
+      to this accounting software.
+    </li>
+  </ul>
+  <hr />
+  <h5 class="text-success">Solution</h5>
+
+
+  <img src="../../assets/images/lemon_schema_soft_design.png" class="w-75"/>
+
+  <ul class="text-success">
+    We can see two big applications:
+    <li>One application for the webshop. The customer can make order,
+      when the customer connect to the interface, he must do an authentification on the system before to go further.
+      If it's granted he can enter in the system if it's note the case it will be refused. </li>
+    <li>
+      Another application for the backoffice and he can add/remove/delete product and see the historic for the new
+      orders by the customers.
+      He can only remove product if there is no order by the customer, if it was the case.
+      the customer must be inform that the product will be no more longer deliver.
+    </li>
+  </ul>
+  <p class="text-success">
+
+    We see there is a connection to another software winbooks, the data must be export in the file format of winbooks.
+    Also the system must import the new data of data who has changed from winbooks.
+  </p>
+  <p class="text-success">
+
+    The technology good for the development are for the webshop a nice web application with an attention for the UI/UX.
+    and also responsive design. Indeed the customer can also connect with his smartphone to the application and it's
+    really interesting
+    if it's responsive.
+    They must be a lot of control in the UI and not only in the backend. Think about also security about injection
+    independancies.
+    BLock some strings in the input also and filter before to send to the backend (via API).
+  </p>
+  <p class="text-success">
+
+    For the backoffice the application can also be in web and also responsive, if the backoffice is checking from a
+    tablet the orders or the products
+    it's also interesting.
+    The technology can be choose in Angular 11 or React JS for the front-end. For the API in the back-end the technology can be choose also.
+  </p>
+  <p class="text-success">
+
+    To be compliant it's interesting to know the format file of winbooks and take care of the format. And to know also
+    the structure of these files.
+    From the front-end we can export the data in JSON to another format.
+  </p>
+
+  <p class="text-success">
+    The data can be save on a Microsoft SQL Server, but it can be another server also.
+    Some api created by the back-end will facilite the access to get and put to the database.
+  </p>
+
+</div>
