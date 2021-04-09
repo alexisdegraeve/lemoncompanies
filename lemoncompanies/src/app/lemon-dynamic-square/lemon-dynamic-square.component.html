@@ -1,10 +1,11 @@
-<div class="lemon-parent">
+<div class="lemon-parent" (contextmenu)="onRightClick()">
 
   <div *ngFor="let in of counter(100) ;let i = index" class="lemon-row">
       <div *ngFor="let in of counter(52) ;let i = index" class="lemon-col">
-        <app-lemon-dynamic-cell></app-lemon-dynamic-cell>
+        <app-lemon-dynamic-cell [newColor]="newColor"></app-lemon-dynamic-cell>
       </div>
   </div>
 
 
 </div>
+<app-lemon-change-color-cell [showPicker]="showContextMenu" (changeColor)="changeColor($event)"></app-lemon-change-color-cell>

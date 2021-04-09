@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-lemon-dynamic-cell',
@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class LemonDynamicCellComponent implements OnInit {
   public innerWidth: any;
   public activate: boolean = false;
+  public mColor: string = 'pink';
+  @Input() newColor = 'pink';
 
   constructor() {
   }
@@ -16,6 +18,10 @@ export class LemonDynamicCellComponent implements OnInit {
   }
 
   switchStatusCell() {
+    if(this.newColor != '' && this.newColor != this.mColor) {
+      this.mColor = this.newColor;
+    }
+
     this.activate = !this.activate;
   }
 
