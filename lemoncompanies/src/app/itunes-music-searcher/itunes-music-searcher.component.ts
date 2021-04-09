@@ -20,10 +20,8 @@ export class ItunesMusicSearcherComponent implements OnInit {
   }
 
   research_artist() {
-   // let nametosearch = "Britney Spears";
     this.itunesmusicService.getItunesSearch(this.searchArtist).subscribe(
       data => {
-        console.log(data);
         this.searchMusic = data.results;
       }
     )
