@@ -1,2 +1,4 @@
-<div class="lemon-cell activate" (click)="switchStatusCell()" [ngClass]="{'activate': activate}">
+<div class="lemon-cell" (click)="switchStatusCell()" [ngClass]="{'pink': activate && mColor=='pink', 'yellow': activate && mColor=='yellow',
+'orange': activate && mColor=='orange', 'purple': activate && mColor=='purple', 'blue': activate && mColor=='blue'}">
+
 </div>

@@ -8,6 +8,7 @@ import { LemonWelcomeComponent } from './lemon-welcome/lemon-welcome.component';
 import { LemonNotFoundComponent } from './lemon-not-found/lemon-not-found.component';
 import { LemonDynamicSquareComponent } from './lemon-dynamic-square/lemon-dynamic-square.component';
 import { LemonDynamicCellComponent } from './lemon-dynamic-cell/lemon-dynamic-cell.component';
+import { LemonChangeColorCellComponent } from './lemon-change-color-cell/lemon-change-color-cell.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { LemonDynamicCellComponent } from './lemon-dynamic-cell/lemon-dynamic-ce
     LemonWelcomeComponent,
     LemonNotFoundComponent,
     LemonDynamicSquareComponent,
-    LemonDynamicCellComponent
+    LemonDynamicCellComponent,
+    LemonChangeColorCellComponent
   ],
   imports: [
     BrowserModule,

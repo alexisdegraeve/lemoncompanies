@@ -4,8 +4,27 @@
   height: 10px;
   display: block;
   cursor: pointer;
+  background-color: transparent;
 
-  &.activate {
-    background-color: red;
+  &.pink {
+    background-color: #ff01ff;
   }
+
+  &.orange {
+    background-color: #ff7e7e;
+  }
+
+  &.purple {
+    background-color: #7e7eff;
+  }
+
+  &.yellow {
+    background-color: #ffff7e;
+  }
+
+  &.blue {
+    background-color: #7effff;
+  }
+
+
 }

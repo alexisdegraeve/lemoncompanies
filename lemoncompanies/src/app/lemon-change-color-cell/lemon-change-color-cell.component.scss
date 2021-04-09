@@ -1,0 +1,69 @@
+.lemon-color-picker {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  border: 1px solid black;
+
+  &.pink {
+    background-color: #ff01ff;
+    cursor: pointer;
+  }
+  &.orange {
+    background-color: #ff7e7e;
+    cursor: pointer;
+  }
+  &.purple {
+    background-color: #7e7eff;
+    cursor: pointer;
+  }
+  &.yellow {
+    background-color: #ffff7e;
+    cursor: pointer;
+  }
+  &.blue {
+    background-color: #7effff;
+    cursor: pointer;
+  }
+
+}
+
+.lemon-color-picker-float {
+  position: absolute;
+  height: 30px;
+  background-color: #fff;
+  top: 100px;
+  left: 100px;
+  box-shadow: 10px 5px 5px rgba(0,0,0,0.5);
+  display: none;
+
+  &.activate {
+    display: block;
+    animation: fadeIn ease 2s;
+    -webkit-animation: fadeIn ease 2s;
+    -moz-animation: fadeIn ease 2s;
+    -o-animation: fadeIn ease 2s;
+    -ms-animation: fadeIn ease 2s;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+
+  @keyframes fadeOut {
+    0% {
+      opacity:1;
+    }
+    100% {
+      opacity:0;
+    }
+  }
+
+
+
+}
+

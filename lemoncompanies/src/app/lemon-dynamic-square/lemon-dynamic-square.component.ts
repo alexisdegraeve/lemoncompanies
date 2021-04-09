@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LemonDynamicSquareComponent implements OnInit {
 
+  public showContextMenu = false;
+  public newColor = '';
+
   constructor() { }
 
   ngOnInit(): void {
@@ -16,6 +19,17 @@ export class LemonDynamicSquareComponent implements OnInit {
     return new Array(i);
   }
 
+  onRightClick() {
+    console.log('right click');
+
+    this.showContextMenu = !this.showContextMenu;
+    return false;
+}
+
+  changeColor(newColor: string) {
+    console.log(newColor);
+    this.newColor = newColor;
+  }
  /* changeSize(){
     window.resizeTo(300,200);
   } */
