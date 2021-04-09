@@ -21,22 +21,15 @@ export class LemonDynamicSquareComponent implements OnInit {
   }
 
   onRightClick() {
-    console.log('right click');
-
     this.showContextMenu = !this.showContextMenu;
     return false;
 }
 
   changeColor(newColor: string) {
-    console.log(newColor);
     this.newColor = newColor;
   }
 
   mclickCell() {
-    console.log('clickcell');
-    //this.selectedCell = selected;
   }
- /* changeSize(){
-    window.resizeTo(300,200);
-  } */
+
 }

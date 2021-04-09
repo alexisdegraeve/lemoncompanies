@@ -1,13 +1,11 @@
 <div class="container-fluid">
-{{ searchArtist }}
   <form class="mt-4" #heroForm="ngForm">
     <div class="form-group">
       <label for="artisteSearch">Artiste</label>
       <input type="text" [(ngModel)]="searchArtist" class="form-control" name="aristeSearch" id="artisteSearch" placeholder="Password" (input)="research_artist()">
-      <small id="artisteSearch" class="form-text text-muted">We'll never share your email with anyone else.</small>
+      <small id="artisteSearch" class="form-text text-muted">Please type in a filter...</small>
     </div>
   </form>
-
 
   <table class="table table-striped mt-4">
     <thead>

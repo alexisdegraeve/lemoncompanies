@@ -1,4 +1,21 @@
-<div *ngFor="let track of ituneTrack">
-  {{track.artistName}}
-</div>
+<div class="container-fluid mt-4">
+  <a href="/itunesmusic" class="btn btn-primary mb-4">Back</a>
+  <div class="d-flex flex-wrap">
+    <div class="card w-30 m-2" *ngFor="let track of ituneTrack">
+      <img class="card-img-top img-album center mt-2" src="{{track.artworkUrl100}}" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">{{track.artistName}}</h5>
+        <p class="card-text">Track: {{track.collectionName}} </p>
+        <p class="card-text">Country: {{track.country}} </p>
 
+
+          <audio controls>
+            <source src="{{track.previewUrl}}" type="audio/mpeg">
+          </audio>
+         </div>
+
+    </div>
+
+  </div>
+
+</div>

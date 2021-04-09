@@ -21,7 +21,6 @@ export class ItunesdetailComponent implements OnInit {
     if(this.route.snapshot.paramMap.get('id') !== null) {
       const id = this.route.snapshot.paramMap.get('id');
       this.collectionId = id? id : '';
-      console.log(id);
       this.research_track();
     }
 
@@ -29,12 +28,9 @@ export class ItunesdetailComponent implements OnInit {
 
 
   research_track() {
-    // let nametosearch = "Britney Spears";
      this.itunesmusicService.getItunesSearchDetail(this.collectionId).subscribe(
        data => {
         this.ituneTrack = data.results;
-        console.log(data.results);
-         //this.searchMusic = data.results;
        }
      )
    }

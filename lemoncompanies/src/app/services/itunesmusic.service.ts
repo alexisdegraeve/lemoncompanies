@@ -17,7 +17,8 @@ export class ItunesmusicService {
   }
 
   getItunesSearchDetail(id: string): Observable<any> {
-    let url = `https://itunes.apple.com/lookup?id=${id}`;
+    let url = `https://itunes.apple.com/lookup?id=${id}&entity=song&media=music`;
+
     return this.http.get<any>(url).pipe();
   }
 }

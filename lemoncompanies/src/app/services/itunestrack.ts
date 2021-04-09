@@ -6,4 +6,5 @@ export interface ItunesTrack {
   trackName?: string;
   artworkUrl100?: string;
   collectionId?: string;
+  previewUrl?: string;
 }

@@ -16,7 +16,6 @@ export class LemonChangeColorCellComponent implements OnInit {
   }
 
   selectedColor(color: string) {
-    console.log(color);
     this.showPicker = false;
     this.changeColor.emit(color);
   }
