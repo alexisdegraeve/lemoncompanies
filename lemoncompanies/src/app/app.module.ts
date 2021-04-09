@@ -13,6 +13,7 @@ import { LemonChangeColorCellComponent } from './lemon-change-color-cell/lemon-c
 import { ItunesMusicSearcherComponent } from './itunes-music-searcher/itunes-music-searcher.component';
 import { FormsModule } from '@angular/forms';
 import { ItunesdetailComponent } from './itunesdetail/itunesdetail.component';
+import { LemonSoftwareDesignComponent } from './lemon-software-design/lemon-software-design.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ItunesdetailComponent } from './itunesdetail/itunesdetail.component';
     LemonDynamicCellComponent,
     LemonChangeColorCellComponent,
     ItunesMusicSearcherComponent,
-    ItunesdetailComponent
+    ItunesdetailComponent,
+    LemonSoftwareDesignComponent
   ],
   imports: [
     BrowserModule,

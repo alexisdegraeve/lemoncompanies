@@ -1,3 +1,4 @@
+import { LemonSoftwareDesignComponent } from './lemon-software-design/lemon-software-design.component';
 import { ItunesMusicSearcherComponent } from './itunes-music-searcher/itunes-music-searcher.component';
 import { LemonDynamicSquareComponent } from './lemon-dynamic-square/lemon-dynamic-square.component';
 import { LemonNotFoundComponent } from './lemon-not-found/lemon-not-found.component';
@@ -11,6 +12,7 @@ const routes: Routes = [
   { path: 'testhtml', component: LemonDynamicSquareComponent },
   { path: 'itunesmusic', component: ItunesMusicSearcherComponent },
   { path: 'itunesdetail/:id', component: ItunesdetailComponent },
+  { path: 'softwaredesign', component: LemonSoftwareDesignComponent },
   { path: '',   redirectTo: '/welcome', pathMatch: 'full' },
   { path: '**', component: LemonNotFoundComponent },  // Wildcard route for a 404 page
 
