@@ -1,0 +1,34 @@
+<div class="container-fluid">
+{{ searchArtist }}
+  <form class="mt-4" #heroForm="ngForm">
+    <div class="form-group">
+      <label for="artisteSearch">Artiste</label>
+      <input type="text" [(ngModel)]="searchArtist" class="form-control" name="aristeSearch" id="artisteSearch" placeholder="Password" (input)="research_artist()">
+      <small id="artisteSearch" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+  </form>
+
+
+  <table class="table table-striped mt-4">
+    <thead>
+      <tr>
+        <th scope="col">Image</th>
+        <th scope="col">Nom</th>
+        <th scope="col">Titre</th>
+        <th scope="col">Details</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let album of searchMusic">
+        <td>
+          <img src="{{ album.artworkUrl30}}" alt="{{ album.artworkUrl30}}">
+
+        </td>
+        <td>{{ album.artistName}}</td>
+        <td>{{ album.trackName}}</td>
+        <td><a [routerLink]="['/itunesdetail/', album.collectionId]">Detail</a></td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>

@@ -7,16 +7,16 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="/">Bienvenue <span class="sr-only">(current)</span></a>
+      <li class="nav-item active"  [routerLinkActive]="['active']">
+        <a class="nav-link"  [routerLink]="['/']">Bienvenue <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link"  (click)="goToLink('testhtml', 1000, 600)">HTML/CSS/Javascript</a>
+      <li class="nav-item"   [routerLinkActive]="['active']">
+        <a class="nav-link"   (click)="goToLink('testhtml', 1000, 600)">Drawing Squares (Html/Css)</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">MVC</a>
+      <li class="nav-item"  [routerLinkActive]="['active']">
+        <a class="nav-link" [routerLink]="['itunesmusic']" routerLinkActive="is-active" >Itunes Music Searcher (MVC)</a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item"   [routerLinkActive]="['active']">
         <a class="nav-link" href="#">Software Design</a>
       </li>
     </ul>

@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -9,6 +10,9 @@ import { LemonNotFoundComponent } from './lemon-not-found/lemon-not-found.compon
 import { LemonDynamicSquareComponent } from './lemon-dynamic-square/lemon-dynamic-square.component';
 import { LemonDynamicCellComponent } from './lemon-dynamic-cell/lemon-dynamic-cell.component';
 import { LemonChangeColorCellComponent } from './lemon-change-color-cell/lemon-change-color-cell.component';
+import { ItunesMusicSearcherComponent } from './itunes-music-searcher/itunes-music-searcher.component';
+import { FormsModule } from '@angular/forms';
+import { ItunesdetailComponent } from './itunesdetail/itunesdetail.component';
 
 @NgModule({
   declarations: [
@@ -18,11 +22,15 @@ import { LemonChangeColorCellComponent } from './lemon-change-color-cell/lemon-c
     LemonNotFoundComponent,
     LemonDynamicSquareComponent,
     LemonDynamicCellComponent,
-    LemonChangeColorCellComponent
+    LemonChangeColorCellComponent,
+    ItunesMusicSearcherComponent,
+    ItunesdetailComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
