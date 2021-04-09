@@ -9,6 +9,7 @@ export class LemonDynamicSquareComponent implements OnInit {
 
   public showContextMenu = false;
   public newColor = '';
+  public selectedCell = false;
 
   constructor() { }
 
@@ -29,6 +30,11 @@ export class LemonDynamicSquareComponent implements OnInit {
   changeColor(newColor: string) {
     console.log(newColor);
     this.newColor = newColor;
+  }
+
+  mclickCell() {
+    console.log('clickcell');
+    //this.selectedCell = selected;
   }
  /* changeSize(){
     window.resizeTo(300,200);
