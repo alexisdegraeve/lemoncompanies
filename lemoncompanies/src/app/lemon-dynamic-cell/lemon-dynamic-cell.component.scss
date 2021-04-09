@@ -1,0 +1,11 @@
+.lemon-cell {
+  border:1px solid blue;
+  width: 10px;
+  height: 10px;
+  display: block;
+  cursor: pointer;
+
+  &.activate {
+    background-color: red;
+  }
+}
