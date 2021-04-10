@@ -34,42 +34,15 @@
   top: 100px;
   left: 100px;
   box-shadow: 10px 5px 5px rgba(0,0,0,0.5);
-  opacity: 0;
-  visibility: hidden;
-  animation: fadeOut ease 2s;
-  -webkit-animation: fadeOut ease 2s;
-  -moz-animation: fadeOut ease 2s;
-  -o-animation: fadeOut ease 2s;
-  -ms-animation: fadeOut ease 2s;
 
-  &.activate {
-    // opacity: 1;
-    visibility: visible;
-    animation: fadeIn ease 2s;
-    -webkit-animation: fadeIn ease 2s;
-    -moz-animation: fadeIn ease 2s;
-    -o-animation: fadeIn ease 2s;
-    -ms-animation: fadeIn ease 2s;
+  &.fadein {
+    transition: opacity 0.3s, visibility 0.3s;
+    opacity: 1;
   }
 
-  @keyframes fadeIn {
-    0% {
-      opacity:0;
-    }
-    100% {
-      opacity:1;
-    }
-  }
-
-
-
-  @keyframes fadeOut {
-    0% {
-      opacity:1;
-    }
-    100% {
-      opacity:0;
-    }
+  &.fadeout {
+    transition: opacity 0.3s, visibility 0.3s;
+    opacity: 0;
   }
 
 

@@ -6,9 +6,8 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   styleUrls: ['./lemon-change-color-cell.component.scss']
 })
 export class LemonChangeColorCellComponent implements OnInit {
-  @Input() showPicker = false;
-  @Output() changeColor = new EventEmitter<string>();
-
+  @Input() showPicker : boolean | undefined;
+  @Output() colorSelect: EventEmitter<string> = new EventEmitter();
 
   constructor() { }
 
@@ -16,8 +15,7 @@ export class LemonChangeColorCellComponent implements OnInit {
   }
 
   selectedColor(color: string) {
-    this.showPicker = false;
-    this.changeColor.emit(color);
+    this.colorSelect.emit(color);
   }
 
 }

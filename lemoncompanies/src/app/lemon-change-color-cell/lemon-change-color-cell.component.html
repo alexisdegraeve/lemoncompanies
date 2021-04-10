@@ -1,7 +1,7 @@
-<div class="lemon-color-picker-float"  [ngClass]="{'activate': showPicker}">
-  <div class="lemon-color-picker pink m-1" (click)="selectedColor('pink')"></div>
-  <div class="lemon-color-picker orange m-1" (click)="selectedColor('orange')"></div>
-  <div class="lemon-color-picker purple m-1" (click)="selectedColor('purple')"></div>
-  <div class="lemon-color-picker yellow m-1" (click)="selectedColor('yellow')"></div>
-  <div class="lemon-color-picker blue m-1" (click)="selectedColor('blue')"></div>
+<div class="lemon-color-picker-float"  [ngClass]="{'fadein' :  (showPicker!==undefined) && showPicker, 'fadeout' : (showPicker!==undefined) && !showPicker}">
+  <div class="lemon-color-picker pink m-1" (click)="selectedColor('#ff01ff')"></div>
+  <div class="lemon-color-picker orange m-1" (click)="selectedColor('#ff7e7e')"></div>
+  <div class="lemon-color-picker purple m-1" (click)="selectedColor('#7e7eff')"></div>
+  <div class="lemon-color-picker yellow m-1" (click)="selectedColor('#ffff7e')"></div>
+  <div class="lemon-color-picker blue m-1" (click)="selectedColor('#7effff')"></div>
 </div>

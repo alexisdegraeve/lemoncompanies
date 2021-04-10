@@ -1,11 +1,2 @@
-<div class="lemon-parent" (contextmenu)="onRightClick()">
-
-  <div *ngFor="let in of counter(100) ;let i = index" class="lemon-row">
-      <div *ngFor="let in of counter(52) ;let i = index" class="lemon-col">
-        <app-lemon-dynamic-cell [newColor]="newColor" [selectCell]="selectedCell"   (clickCell)="selectedCell=$event" ></app-lemon-dynamic-cell>
-      </div>
-  </div>
-
-
-</div>
-<app-lemon-change-color-cell  [showPicker]="showContextMenu && !selectedCell" (changeColor)="changeColor($event)"></app-lemon-change-color-cell>
+<canvas #myCanvas (click)="clickCanvas()" (contextmenu)="contextMenuStart()" (mousedown)="mouseDown()" (mouseup)="mouseUp($event)" (mousemove)="mouseMove($event)"></canvas>
+<app-lemon-change-color-cell  (colorSelect)="changeSelectColor($event)" [showPicker]="showContextMenu"></app-lemon-change-color-cell>
