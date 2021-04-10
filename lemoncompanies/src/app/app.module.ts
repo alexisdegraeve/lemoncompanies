@@ -14,6 +14,7 @@ import { ItunesMusicSearcherComponent } from './itunes-music-searcher/itunes-mus
 import { FormsModule } from '@angular/forms';
 import { ItunesdetailComponent } from './itunesdetail/itunesdetail.component';
 import { LemonSoftwareDesignComponent } from './lemon-software-design/lemon-software-design.component';
+import { LemonFooterComponent } from './lemon-footer/lemon-footer.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { LemonSoftwareDesignComponent } from './lemon-software-design/lemon-soft
     LemonChangeColorCellComponent,
     ItunesMusicSearcherComponent,
     ItunesdetailComponent,
-    LemonSoftwareDesignComponent
+    LemonSoftwareDesignComponent,
+    LemonFooterComponent
   ],
   imports: [
     BrowserModule,
