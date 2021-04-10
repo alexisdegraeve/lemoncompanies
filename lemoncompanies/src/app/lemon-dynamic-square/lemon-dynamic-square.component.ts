@@ -24,7 +24,6 @@ export class LemonDynamicSquareComponent implements AfterViewInit, OnInit {
   selectedColor = this.colorPink;
   showContextMenu = false;
   isDrawing = false;
-
   // setting a width and height for the canvas
   @Input() public width = 1000;
   @Input() public height = 600;
@@ -73,6 +72,7 @@ export class LemonDynamicSquareComponent implements AfterViewInit, OnInit {
       throw new Error('Failed to get 2D context');
     }
     res.beginPath();
+    res.fillStyle = '#ffffff'
     res.rect(posX, posY, sizeSquare, sizeSquare);
     res.lineWidth = 0.2;
     res.stroke();
@@ -89,22 +89,18 @@ export class LemonDynamicSquareComponent implements AfterViewInit, OnInit {
       throw new Error('Failed to get 2D context');
     }
 
-    var p = res.getImageData(posX, posY, 10, 10).data;
+    var p = res.getImageData(posX, posY, 1, 1).data;
     var hex = '#' + ('000000' + this.rgbToHex(p[0], p[1], p[2])).slice(-6);
 
-    if (hex !== '#ffffff') {
-      res.fillStyle = '#ffffff';
-    } else {
-      res.fillStyle = this.selectedColor;
-    }
-
     res.beginPath();
+    if ((hex === '#ffffff') || (hex === '#000000')) {
+      res.fillStyle = this.selectedColor;
+    } else {
+      res.fillStyle = '#ffffff';
+    }
     res.lineWidth = 0.2;
     res.stroke();
     res.fillRect(posX, posY, sizeSquare, sizeSquare);
-
-    var p = res.getImageData(posX, posY, 10, 10).data;
-    var hex = '#' + ('000000' + this.rgbToHex(p[0], p[1], p[2])).slice(-6);
 
   }
 
@@ -138,26 +134,16 @@ export class LemonDynamicSquareComponent implements AfterViewInit, OnInit {
     this.fillSquare(canvasEl, newPointX, newPointY, 10);
   }
 
-  clickCanvas() {
-   // console.log('clickcanvas');
-  //  this.clickZoneCanvas = true;
-  }
-
-  mouseDown() {
+  mouseDown(event: any) {
     this.isDrawing = true;
   }
 
   mouseUp(event: any) {
-    if(this.isDrawing === true ){
-
-    //  this.drawCanvas(event);
-      this.isDrawing = false;
-    }
-
+    this.drawCanvas(event);
+    this.isDrawing = false;
   }
 
   mouseMove(event: any) {
-    console.log('mousemove');
     if (this.isDrawing === true) {
       this.drawCanvas(event);
     }

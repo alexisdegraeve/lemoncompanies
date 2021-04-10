@@ -1,2 +1,3 @@
-<canvas #myCanvas (click)="clickCanvas()" (contextmenu)="contextMenuStart()" (mousedown)="mouseDown()" (mouseup)="mouseUp($event)" (mousemove)="mouseMove($event)"></canvas>
+<canvas #myCanvas (contextmenu)="contextMenuStart()" (mousedown)="mouseDown($event)"
+                  (mouseup)="mouseUp($event)" (mousemove)="mouseMove($event)"></canvas>
 <app-lemon-change-color-cell  (colorSelect)="changeSelectColor($event)" [showPicker]="showContextMenu"></app-lemon-change-color-cell>
