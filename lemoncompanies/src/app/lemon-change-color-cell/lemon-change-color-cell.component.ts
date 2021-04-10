@@ -6,7 +6,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   styleUrls: ['./lemon-change-color-cell.component.scss']
 })
 export class LemonChangeColorCellComponent implements OnInit {
-  @Input() showPicker : boolean | undefined;
+  @Input() public showPicker : boolean | undefined;
   @Output() colorSelect: EventEmitter<string> = new EventEmitter();
 
   constructor() { }
